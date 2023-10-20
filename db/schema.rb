@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_20_134535) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_20_144825) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,8 +31,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_20_134535) do
     t.string "staff_role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "staff_id"
     t.index ["email"], name: "index_clinic_app_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_clinic_app_users_on_reset_password_token", unique: true
+  end
+
+  create_table "test_animals", id: :serial, force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.date "birth_date"
+    t.decimal "weight_kg"
+    t.string "species", limit: 50
   end
 
 end
