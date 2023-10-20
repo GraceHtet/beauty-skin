@@ -76,3 +76,5 @@ end
 gem 'rubocop', '~> 1.57'
 
 gem 'dotenv-rails', '~> 2.8'
+
+gem "devise", "~> 4.9"
