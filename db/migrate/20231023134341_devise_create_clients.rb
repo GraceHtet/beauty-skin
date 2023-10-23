@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-class DeviseCreateClinicAppUsers < ActiveRecord::Migration[7.0]
+class DeviseCreateClients < ActiveRecord::Migration[7.0]
   def change
-    create_table :clinic_app_users do |t|
+    create_table :clients do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :email,              null: false, default: ''
+      t.string :encrypted_password, null: false, default: ''
 
       ## Recoverable
       t.string   :reset_password_token
@@ -32,22 +32,19 @@ class DeviseCreateClinicAppUsers < ActiveRecord::Migration[7.0]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-      t.string :username, null:false
-      t.string :fullname, null:false
-      t.string :gender, null:false
-      t.date :date_of_birth, null:false
+      t.string :name
+      t.integer :phone
+      t.string :app
+      t.string :gender
+      t.date :date_of_birth
       t.string :city
-      t.integer :phone, null:false
-      t.string :app, null:false
-      t.string :role
-      t.string :staff_role
 
       t.timestamps null: false
     end
 
-    add_index :clinic_app_users, :email,                unique: true
-    add_index :clinic_app_users, :reset_password_token, unique: true
-    # add_index :clinic_app_users, :confirmation_token,   unique: true
-    # add_index :clinic_app_users, :unlock_token,         unique: true
+    add_index :clients, :email,                unique: true
+    add_index :clients, :reset_password_token, unique: true
+    # add_index :clients, :confirmation_token,   unique: true
+    # add_index :clients, :unlock_token,         unique: true
   end
 end
