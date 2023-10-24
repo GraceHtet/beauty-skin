@@ -127,6 +127,8 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.3)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     jwt (2.7.1)
     language_server-protocol (3.17.0.3)
     loofah (2.21.4)
@@ -283,6 +285,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.8)
   importmap-rails
   jbuilder
+  jsonapi-serializer (~> 2.2)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors (~> 2.0)
