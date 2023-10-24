@@ -78,3 +78,7 @@ gem 'rubocop', '~> 1.57'
 gem 'dotenv-rails', '~> 2.8'
 
 gem 'devise', '~> 4.9'
+
+gem "rack-cors", "~> 2.0"
+
+gem "devise-jwt", "~> 0.11.0"
