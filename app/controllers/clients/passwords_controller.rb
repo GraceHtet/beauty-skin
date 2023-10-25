@@ -2,6 +2,7 @@
 
 module Clients
   class PasswordsController < Devise::PasswordsController
+    respond_to :json
     # GET /resource/password/new
     # def new
     #   super
