@@ -2,9 +2,9 @@
 
 Rails.application.routes.draw do
   devise_for :staffs, path: '', path_names: {
-    sign_in: 'signin',
-    sign_out: 'signout',
-    registration: 'signup'
+    sign_in: 'login',
+    sign_out: 'logout',
+    registration: 'register'
   }, controller: {
     sessions: 'staffs/sessions',
     registrations: 'staffs/registrations',
@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   }
 
   devise_for :clients, path: '',  path_names: {
-    sign_in: 'signin',
-    sign_out: 'signout',
-    registration: 'signup'
+    sign_in: 'login',
+    sign_out: 'logout',
+    registration: 'register'
   }, controller: {
     sessions: 'clients/sessions',
     registrations: 'staffs/registrations',
