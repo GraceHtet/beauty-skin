@@ -38,7 +38,7 @@ class DeviseCreateStaffs < ActiveRecord::Migration[7.0]
       t.date :date_of_birth
       t.string :address
       t.string :role
-      t.integer :staff_id
+      t.integer :staff_id, null: false
 
       t.timestamps null: false
     end

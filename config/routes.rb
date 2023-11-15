@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     passwords: 'staffs/passwords'
   }
 
-  devise_for :clients, path: '',  path_names: {
+  devise_for :clients, path: '', path_names: {
     sign_in: 'login',
     sign_out: 'logout',
     registration: 'register'
